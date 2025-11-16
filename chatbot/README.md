@@ -23,3 +23,7 @@ Run the script:
 python cyber_init.py
 ```
 
+
+### Alternative Script
+If you prefer not to install `rich`, use `cyber_init_basic.py`. It provides the same interaction using standard `print()` and `input()` functions.
+
