@@ -11,7 +11,6 @@ while player_wins < 2 and computer_wins < 2:
     player_choice = input("Choose rock, paper, or scissors: ").lower()
 
     computer_choice = random.choice(choices)
-
     print (f"Computer chose: {computer_choice}")
 
     if (player_choice == "rock" and computer_choice == "scissors") or (player_choice == "scissors" and computer_choice == "paper") or (player_choice == "paper" and computer_choice == "rock"):
