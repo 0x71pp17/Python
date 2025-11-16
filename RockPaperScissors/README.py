@@ -1,5 +1,3 @@
-Here is the combined README:
-
 ## README: Rock, Paper, Scissors
 
 A classic game of Rock, Paper, Scissors implemented in Python. Play against the computer and see who wins the most rounds.
