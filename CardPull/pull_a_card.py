@@ -1,0 +1,44 @@
+import random
+
+def draw_card(deck, num):
+    hand = []
+    for _ in range(num):
+        if deck:
+            hand.append(deck.pop())
+    return hand, deck 
+
+def create_deck():
+    suits = ["♥", "♦", "♣", "♠"]
+    ranks = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
+    deck = []
+    for suit in suits:
+        for rank in ranks:
+            deck.append((suit, rank))
+    random.shuffle(deck)
+    return deck    
+
+deck = create_deck()
+def show_card(card):
+    space = " "
+    if len(card[1]) == 2:
+        space = ""
+    print (f"""
++-------+
+|{card[1]}     {space}|
+|       |
+|   {card[0]}   |
+|       |
+|{space}     {card[1]}|
++-------+
+""")
+while len(deck) > 0:
+    num_cards = int(input("How many cards do you want to draw? "))
+    if num_cards > len(deck):
+        print("Not enough cards left in the deck.")
+        num_cards = len(deck)
+    hand, deck = draw_card(deck, num_cards)      
+    # ... get num_cards, draw cards ...
+    for card in hand:  # 'card' is defined here by the for loop
+        show_card(card)
+
+print('We are out of cards.')
