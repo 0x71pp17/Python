@@ -20,5 +20,5 @@ python library_system.py
 The script will:
 1.  Create a `Library` instance.
 2.  Create several `Book` instances.
-3.  Add the books to the library.
-4.  Display the information of all books in the library.
+3.  Add books to the library.
+4.  Display information (title, author, availability) of all books in the library.
