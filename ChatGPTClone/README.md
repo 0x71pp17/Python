@@ -22,7 +22,7 @@ OPENAI_API_KEY=your_api_key_here
 ## Usage
 Run the script:
 ```bash
-python chatbot.py
+python local_chatbot.py
 ```
 Then type your messages and press Enter to chat.
 
