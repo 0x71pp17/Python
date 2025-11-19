@@ -1,15 +1,33 @@
 # ChatGPT API Chatbot
 
-A simple command-line chatbot that interacts with OpenAI's `gpt-3.5-turbo` model using the Chat Completions API.
+A simple command-line chatbot that interacts with OpenAI's API, available in two versions.
 
-## Description
-This script enables a continuous conversation with OpenAI's language model by maintaining message history locally. It reads your API key from environment variables and allows real-time chat in the terminal.
+## Versions
+
+### `Version 1`: Basic Conversation (Simple)
+- Uses the **Chat Completions API**
+- Maintains conversation history in memory
+- Supports `exit` and `new` commands
+- No persistent thread IDs
+- Ideal for simple, single-session chats
+
+### `Version 2`: Threaded Conversation (Advanced)
+- Uses the **Assistants API**
+- Creates and tracks real `thread_id`s
+- Stores thread IDs in `threads` list for future use
+- Fully supports switching or resuming conversations
+- Best for advanced use with persistent context
+
+## Features
+- Type `exit` to end the program
+- Type `new` to start a fresh conversation thread
+- Conversation history preserved within each session
 
 ## Installation
 1. Clone the repository
 2. Install dependencies:
 ```bash
-pip install requests python-dotenv
+pip install openai python-dotenv
 ```
 
 ## Setup
@@ -20,17 +38,17 @@ OPENAI_API_KEY=your_api_key_here
 ```
 
 ## Usage
-Run the script:
+Run either script:
 ```bash
-python local_chatbot.py
+python chatbot_basic.py
+# or
+python chatbot_threaded.py
 ```
-Then type your messages and press Enter to chat.
 
 ## Requirements
 - Python 3.6+
-- `requests`
+- `openai` (v1.0+)
 - `python-dotenv`
 
 ## License
 MIT
-
