@@ -11,10 +11,22 @@ url = "https://api.openai.com/v1/chat/completions"
 
 # Initialize conversation history
 messages = []
-current_thread_id = None  # Not used in OpenAI, but kept for conceptual alignment
+threads = []  # To store thread IDs if extended later
+
+print("Welcome! Type your message and press Enter to send.")
+print("Type 'exit' to end the program")
+print("Type 'new' to start a new conversation thread.")
+print("Starting a new chat session.\n")
 
 while True:
     user_message = input("You: ")
+    
+    if user_message.lower() == "exit":
+        break
+    elif user_message.lower() == "new":
+        messages = []  # Clear message history for new thread
+        print("Started a new conversation thread.")
+        continue
     
     # Add user message to conversation
     messages.append({"role": "user", "content": user_message})
