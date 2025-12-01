@@ -34,3 +34,5 @@ scrape_with_params("https://example.com", tag="h2", class_name="title")
 Adjust the URL, tag, and class name to target your desired content.
 
 
+## Notes
+⚠️ This script is intended for ethical (**`authorized & permissioned`**) web security purposes only.
