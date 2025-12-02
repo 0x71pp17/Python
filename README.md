@@ -1,5 +1,6 @@
 # Python Code Dev
 
-This repository is a personal space dedicated to **Python** development — serving as a simple, practical reference for learning and experimentation.
+This is a personal space made public, dedicated to **Python** development — serving as a simple, practical reference for learning and experimentation.
 
-Includes small-scale, standalone projects using Python.
+It includes small-scale, standalone projects using Python for automation, scripting, and tools.
+
